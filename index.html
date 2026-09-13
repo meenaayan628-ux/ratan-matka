@@ -396,19 +396,25 @@
 
         .hero-image {
             position: absolute;
-            right: 2%;
+            right: 1%;
             bottom: 0;
-            width: 49%;
-            max-width: 720px;
+
+            /* Keep the complete girl visible */
+            height: calc(100vh - 112px);
+            width: auto;
+            max-width: none;
+
             z-index: 8;
             pointer-events: none;
         }
 
         .hero-image img {
             display: block;
-            width: 100%;
-            height: auto;
+            height: 100%;
+            width: auto;
+            max-width: none;
             object-fit: contain;
+            object-position: bottom center;
         }
 
         /* =========================
@@ -465,7 +471,10 @@
             }
 
             .hero-image {
-                width: 51%;
+                height: calc(100vh - 112px);
+                width: auto;
+                max-width: none;
+                right: 0;
             }
         }
 
@@ -531,10 +540,17 @@
 
             .hero-image {
                 position: relative;
+                height: auto;
                 width: 75%;
                 max-width: 650px;
                 right: auto;
                 margin: 0 auto;
+            }
+
+            .hero-image img {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
             }
 
             .download-btn {
@@ -592,7 +608,13 @@
 
             .hero-image {
                 width: 100%;
+                height: auto;
                 margin-top: 20px;
+            }
+
+            .hero-image img {
+                width: 100%;
+                height: auto;
             }
 
             .shape.one {
@@ -723,7 +745,7 @@
             <div class="hero-image">
 
                 <img
-                    src="hero.png"
+                    src="girl.png"
                     alt="Ratan Matka App"
                 >
 
